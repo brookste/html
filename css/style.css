@@ -1,0 +1,239 @@
+/* =========================================
+   SISTEMA DE DESIGN (cores, tipografia, espaçamento)
+   ========================================= */
+:root {
+  /* Paleta de cores */
+  --cor-primaria: #2e7d32;      /* Verde principal */
+  --cor-secundaria: #ff9800;    /* Laranja */
+  --cor-clara: #f7f7f7;         /* Fundo suave */
+  --cor-texto: #333;
+  --cor-branca: #fff;
+
+  /* Tipografia */
+  --fonte-grande: 48px;
+  --fonte-titulo: 32px;
+  --fonte-subtitulo: 22px;
+  --fonte-corpo: 16px;
+  --fonte-pequena: 14px;
+
+  /* Espaçamento modular */
+  --esp-1: 8px;
+  --esp-2: 16px;
+  --esp-3: 24px;
+  --esp-4: 32px;
+  --esp-5: 48px;
+}
+
+/* =========================================
+   ESTILO GLOBAL
+   ========================================= */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--cor-clara);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+/* Centralização geral e espaçamento */
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: var(--esp-4);
+}
+
+/* =========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  text-align: center;
+  padding: var(--esp-3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: var(--fonte-grande);
+}
+
+/* Menu */
+nav {
+  background-color: #256628;
+  display: flex;
+  justify-content: center;
+  gap: var(--esp-3);
+  padding: var(--esp-2);
+}
+
+nav a {
+  color: var(--cor-branca);
+  text-decoration: none;
+  font-weight: bold;
+  padding: var(--esp-1) var(--esp-2);
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-branca);
+}
+
+/* =========================================
+   SEÇÕES
+   ========================================= */
+section {
+  text-align: center;
+  margin-top: var(--esp-5);
+}
+
+section h2 {
+  color: var(--cor-primaria);
+  font-size: var(--fonte-titulo);
+  margin-bottom: var(--esp-2);
+}
+
+section h3 {
+  color: var(--cor-secundaria);
+  font-size: var(--fonte-subtitulo);
+  margin-bottom: var(--esp-3);
+}
+
+/* =========================================
+   INTRODUÇÃO (imagem e texto principal)
+   ========================================= */
+#intro img {
+  border-radius: 20px;
+  border: 3px solid var(--cor-primaria);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 400px;
+}
+
+#intro img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   CARDS DE PROJETOS
+   ========================================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--esp-3);
+  margin-top: var(--esp-3);
+}
+
+.card {
+  background-color: var(--cor-branca);
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  padding: var(--esp-3);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h4 {
+  color: var(--cor-primaria);
+  margin-top: var(--esp-2);
+}
+
+.card p {
+  font-size: var(--fonte-pequena);
+}
+
+/* =========================================
+   CARD DE DOAÇÃO
+   ========================================= */
+.doacao {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.card-doacao {
+  background-color: var(--cor-branca);
+  border: 2px solid var(--cor-primaria);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-doacao:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card-doacao h2 {
+  color: var(--cor-primaria);
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.card-doacao p {
+  color: #555;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.card-doacao button {
+  background-color: var(--cor-secundaria);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-doacao button:hover {
+  background-color: #e57c00; /* Laranja mais escuro */
+}
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  text-align: center;
+  padding: var(--esp-3);
+  margin-top: var(--esp-5);
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: var(--esp-1);
+  }
+
+  #intro img {
+    width: 90%;
+  }
+
+  .card-doacao {
+    margin: 0 15px;
+  }
+}

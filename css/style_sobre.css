@@ -1,0 +1,155 @@
+/* =========================================
+   SISTEMA DE DESIGN
+   ========================================= */
+:root {
+  --cor-primaria: #2e7d32;
+  --cor-secundaria: #ff9800;
+  --cor-clara: #f7f7f7;
+  --cor-texto: #333;
+  --cor-branca: #fff;
+
+  --esp-1: 8px;
+  --esp-2: 16px;
+  --esp-3: 24px;
+  --esp-4: 32px;
+  --esp-5: 48px;
+}
+
+/* =========================================
+   GLOBAL
+   ========================================= */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--cor-clara);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+/* =========================================
+   CABEÇALHO
+   ========================================= */
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  text-align: center;
+  padding: var(--esp-3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+/* =========================================
+   MENU
+   ========================================= */
+nav {
+  background-color: #256628;
+  display: flex;
+  justify-content: center;
+  gap: var(--esp-3);
+  padding: var(--esp-2);
+}
+
+nav a {
+  color: var(--cor-branca);
+  text-decoration: none;
+  font-weight: bold;
+  padding: var(--esp-1) var(--esp-2);
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--cor-secundaria);
+}
+
+/* =========================================
+   CONTEÚDO
+   ========================================= */
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: var(--esp-4);
+  text-align: center;
+}
+
+section h2 {
+  color: var(--cor-primaria);
+  font-size: 2em;
+  margin-bottom: var(--esp-2);
+}
+
+section p {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: var(--esp-3);
+  text-align: justify;
+}
+
+/* =========================================
+   IMAGEM CENTRAL
+   ========================================= */
+img {
+  display: block;
+  margin: var(--esp-4) auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   CARDS (MISSÃO, VISÃO, VALORES)
+   ========================================= */
+.mvv-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--esp-3);
+  margin-top: var(--esp-4);
+}
+
+.mvv-card {
+  background-color: var(--cor-branca);
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  padding: var(--esp-3);
+  transition: 0.3s;
+}
+
+.mvv-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.mvv-card h3 {
+  color: var(--cor-primaria);
+  margin-bottom: var(--esp-2);
+}
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  text-align: center;
+  padding: var(--esp-3);
+  margin-top: var(--esp-5);
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  section h2 {
+    font-size: 1.6em;
+  }
+
+  img {
+    width: 90%;
+  }
+}
